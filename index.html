@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOLEDILAN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="loginPage">
+
+        <div class="login-card">
+
+            <img src="logo.png" alt="Logo" class="logo">
+
+            <h1>ECOLEDILAN</h1>
+
+            <p class="subtitle">
+                Portail scolaire personnel
+            </p>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Identifiant">
+                          
+            <input
+    type="password"
+    id="password"
+    placeholder="Mot de passe">
+
+<button
+    type="button"
+    class="show-password"
+    onclick="togglePassword()">
+    👁 Afficher / Masquer
+</button>
+
+            <button onclick="login()">
+                Se connecter
+            </button>
+
+            <p id="error"></p>
+
+        </div>
+
+    </div>
+
+    <div id="dashboard" class="hidden">
+
+        <header>
+
+            <div>
+                <h2>ECOLEDILAN</h2>
+                <span>Tableau de bord</span>
+                <h2 id="welcome"></h2>
+            </div>
+
+            <button
+                class="logout"
+                onclick="logout()">
+                Déconnexion
+            </button>
+
+        </header>
+
+        <main>
+
+            <div class="card">
+
+                <h3>🎓 ÉcoleDirecte</h3>
+
+                <p>
+                    Accéder à votre espace scolaire.
+                </p>
+
+                <a
+                    href="https://www.ecoledirecte.com"
+                    target="_blank">
+
+                    Ouvrir ÉcoleDirecte
+
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>📝 Notes</h3>
+
+                <textarea id="notes"></textarea>
+
+                <button onclick="saveNotes()">
+                    Sauvegarder
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h3>✅ Tâches</h3>
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Nouvelle tâche">
+
+                <button onclick="addTask()">
+                    Ajouter
+                </button>
+
+                <ul id="taskList"></ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>🕒 Heure</h3>
+
+                <p id="clock"></p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
