@@ -7,6 +7,7 @@ const users = {
     "jael": "jael123",
     "nayan": "nayan123",
     "theo": "theo123"
+    "kenzo": "kenzo123"
 };
 
 function login() {
